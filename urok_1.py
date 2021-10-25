@@ -27,8 +27,17 @@ print('через год Вам будет', var + 1)
 sec = int(input('введите текущее время в секундах'))
 minutes = sec // 60
 sec = sec % 60
+sec = str(sec)
+if len(sec) < 2:
+    sec = '0' + sec
 hour = minutes // 60
+hour = str(hour)
+if len(hour) < 2:
+    hour = '0' + str(hour)
 minutes = minutes % 60
+minutes = str(minutes)
+if len(minutes) < 2:
+    minutes = '0' + str(minutes)
 print('Текущее время:',hour, ':', minutes, ':', sec)
 
 #3. Узнайте у пользователя число n. 
@@ -66,11 +75,12 @@ print('наибольшее число через while:', max_chislo)
 # вычислите рентабельность выручки (соотношение прибыли к выручке). 
 # Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.
 
-vyruchka = int(input('Напишиту Вашу выручку '))
-izderzhki = int(input('Напишиту Вашу издержку '))
+vyruchka = int(input('Напишите Вашу выручку '))
+izderzhki = int(input('Напишите Вашу издержку '))
 zarabotok = vyruchka-izderzhki
 if zarabotok > 0:
     print('Ваша прибыль составляет:', zarabotok, ' руб.')
+    print('Htynf,tkmyjcnm выручки:', (vyruchka/izderzhki - 1) *100, '%')
 else:
     print('Ваш убыток составляет:', zarabotok, ' руб.')
 
@@ -88,7 +98,7 @@ else:
 a = int(input('Введите параметр a: '))
 b = int(input('Введите параметр b: '))
 i = 1
-while a < b:
+while a <= b:
     if i == 1:
         print('1-й день: ', a)
         i += 1
