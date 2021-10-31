@@ -162,7 +162,3 @@ int_func(lat_slova)
 '''
 git test commiting 
 '''
-
-
-
-
