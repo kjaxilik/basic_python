@@ -1,0 +1,4 @@
+Bond 12000
+Petersen 21000
+Rudakov 14000
+Jaxilikov 29000
